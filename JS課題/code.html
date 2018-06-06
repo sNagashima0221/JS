@@ -1,0 +1,671 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="code.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<title>言語の記述法まとめ</title>
+</head>
+
+<body>
+	<header>
+	<a href="#modalInclude"><div class="click"><h1>言語の記述法まとめ</h1>
+		<p class="clickText">click ▼</p></div></a>
+	<div id="modal" class="modalWrapper">
+	<div class="modalInclude">
+		<figure><img src="images/progate.jpg" alt=""></figure>
+		<p>Progateで学習した内容をまとめました！</p>
+		<a href="#"><p class="close">close ×</p></a>
+	</div>
+	</div>
+
+	<nav class="globalMenuPc">
+		<ul>
+		<li><a href="#jq">jQuery</a>
+			<div class="mddwrap">
+			<ul>
+				<div class="mgginner250"><li>＞<a href="#jq_1">要素を隠す</a></li>
+				<li>＞<a href="#jq_2">フェードアウト</a></li>
+				<li>＞<a href="#jq_3">クリックイベント</a></li></div>
+				<div class="mgginner250"><li>＞<a href="#jq_4">クリックイベントとcssメソッド</a></li>
+				<li>＞<a href="#jq_5">マウスオーバーイベント</a></li></div>
+			</ul></div>
+		</li>
+		<li><a href="#js">JavaScript</a>
+			<div class="mddwrap">
+			<ul>
+				<div class="mgginner250"><li>＞<a href="#js_1">変数を使った計算</a></li>
+				<li>＞<a href="#js_2">大小と真偽値</a></li>
+				<li>＞<a href="#js_3">if文</a></li></div>
+				<div class="mgginner250"><li>＞<a href="#js_4">switch文</a></li>
+				<li>＞<a href="#js_5">while文</a></li>
+				<li>＞<a href="#js_6">for文</a></li></div>
+			</ul></div>
+		</li>
+		<li><a href="#ph">PHP</a>
+			<div class="mddwrap">
+			<ul>
+				<div class="mgginner250"><li>＞<a href="#ph_1">変数</a></li>
+				<li>＞<a href="#ph_2">変数を使った計算</a></li>
+				<li>＞<a href="#ph_3">else if文</a></li>
+				<li>＞<a href="#ph_4">switch文</a></li></div>
+				<div class="mgginner250"><li>＞<a href="#ph_5">インデックス値</a></li>
+				<li>＞<a href="#ph_6">インデックス値の応用</a></li>
+				<li>＞<a href="#ph_7">for文</a></li>
+				<li>＞<a href="#ph_8">while文</a></li></div>
+				<div class="mgginner250"><li>＞<a href="#ph_9">for文とbreak</a></li>
+				<li>＞<a href="#ph_10">for文とcontinue</a></li>
+				<li>＞<a href="#ph_11">oreach文</a></li></div>
+				<div class="mgginner250"><li>＞<a href="#ph_12">関数<br>（strlen、count、rand）</a></li>
+				<li>＞<a href="#ph_13">関数の定義</a></li>
+				<li>＞<a href="#ph_14">戻り値</a></li></div>
+			</ul></div>
+		</li>
+		<li><a href="#rb">Ruby</a>
+			<div class="mddwrap">
+			<ul>
+				<div class="mgginner250"><li>＞<a href="#rb_1">文字列に変数を挿入</a></li>
+				<li>＞<a href="#rb_2">文字列にインデックス付きの変数を挿入</a></li>
+				<li>＞<a href="#rb_3">else if文</a></li></div>
+			</ul></div>
+		</li>
+		<li><a href="#sq">SQL</a>
+			<div class="mddwrap">
+			<ul>
+				<div class="mgginner200"><li>＞<a href="#sq_1">比較演算子</a></li>
+				<li>＞<a href="#sq_2">LIKE演算子</a></li>
+				<li>＞<a href="#sq_3">NOT演算子</a></li></div>
+				<div class="mgginner200"><li>＞<a href="#sq_4">NULLであるデータを取得</a></li>
+				<li>＞<a href="#sq_5">AND演算子</a></li>
+				<li>＞<a href="#sq_6">ORDER BYとLIMIT</a></li></div>
+			</ul></div>
+		</li>
+		<li><a href="#py">Python</a></li>
+		</ul>
+	</nav>
+	
+
+	<nav class="globalMenuSp">
+    <ul>
+        <li><a href="#jq">jQuery</a></li>
+		<li><a href="#js">JavaScript</a></li>
+		<li><a href="#ph">PHP</a></li>
+		<li><a href="#rb">Ruby</a></li>
+		<li><a href="#sq">SQL</a></li>
+		<li><a href="#py">Python</a></li>
+    </ul>
+	</nav>
+	<div class="navToggle">
+    <span></span><span></span><span></span><span>menu</span>
+	</div>
+	
+	
+</header>
+
+<div id="wrap">
+<main>
+	
+<h2 id="jq">jQuery</h2>
+	<section>
+<p>■命令文：$(セレクタ).メソッド(引数);</p>
+<br>
+<p>ex.)</p>
+<div class="box" id="jq_1">
+<h3>//要素を隠す</h3>
+<p>  $('h1').hide();</p>
+</div>
+
+<div class="box" id="jq_2">
+<h3>//フェードアウト</h3>
+<p>  $('img').fadeOut(1500);</p>
+</div>
+
+<div class="box" id="jq_3">
+<h3>//クリックイベント</h3>
+<p>  $('#hide-text').click(function(){<br>
+	$('#text').slideUp();<br>
+});</p>
+</div>
+<div class="box" id="jq_4">
+<h3>//クリックイベントとcssメソッド</h3>
+<p>$('#change-css').click(function(){<br>
+	$('#text').css('color','red');<br>
+    $('#text').css('font-size','50px');<br>
+});</p>
+</div>
+
+<div class="box" id="jq_5">
+<h3>//マウスオーバーイベント</h3>
+ <p> $('#language-wrapper').hover(<br>
+  	function(){<br>
+  $('.language-text') .fadeIn();<br>
+  },<br>
+	function(){<br>
+  $('.language-text') .fadeOut();<br>
+  }<br>
+  );</p>
+</div>
+	</section>
+
+
+	
+<h2 id="js">JavaScript</h2>
+	<section>
+<p>■出力文：console.log(○○);</p>
+<br>
+<p>ex.)</p>
+<div class="box" id="js_1">
+<h3>//変数を使った計算</h3>
+<p>var width = 7;<br>
+width=width+5;<br>
+var height = 9;<br>
+height=height-2;<br>
+var area = width * height;<br>
+console.log(area);</p>
+⇒結果：84
+</div>
+	
+<div class="box" id="js_2">
+<h3>//大小と真偽値</h3>	
+<p>var x = 78;<br>
+console.log(x&gt;=30 &amp;&amp; x&lt;60);<br>
+console.log(x&gt;=30 || x&lt;60);</p>
+⇒結果：false<br>
+　　　　true
+</div>
+
+<div class="box" id="js_3">
+<h3>//if文</h3>
+<p>var level = 9;<br>
+if (level &gt;= 10) {<br>
+  console.log("手裏剣と忍者刀を装備できます");<br>
+}<br>
+else if(levelgt;=5&amp;&amp;&lt;10){<br>
+  console.log("忍者刀を装備できます");<br>
+} <br>
+else {<br>
+  console.log("何も装備できません");<br>
+}</p>
+⇒結果：忍者刀を装備できます
+</div>
+
+<div class="box" id="js_4">
+<h3>//switch文</h3>
+<p>switch(item){<br>
+  var item = "手裏剣";<br>
+  case"手裏剣":<br>
+  console.log("忍者が投げて使います");<br>
+  break;<br>
+  case"忍者刀":<br>
+  console.log("忍者が使う短い刀です");<br>
+  break;<br>
+  default:<br>
+  console.log("アイテムが存在しません");<br>
+}</p>
+⇒結果：忍者が投げて使います
+</div>
+	
+<div class="box" id="js_5">
+<h3>//while文</h3>
+<p>var i=1;<br>
+while (i&lt;100){<br>
+console.log(i);<br>
+i=i+1;<br>
+}</p>
+⇒結果：1<br>
+　　　　2<br>
+　　　　3<br>
+　　　　4<br>
+　　　　5<br>
+　　　　6<br>
+　　　　...<br>
+　　　　99
+</div>
+	
+<div class="box" id="js_6">
+<h3>//for文</h3>	
+<p>for(var i=1 ; i&lt;100 ; i+=1){<br>
+  console.log(i);<br>
+}</p>
+⇒結果：1<br>
+　　　　2<br>
+　　　　3<br>
+　　　　4<br>
+　　　　5<br>
+　　　　6<br>
+　　　　...<br>
+　　　　99
+</div>
+	</section>
+	
+
+<h2 id="ph">PHP</h2>
+	<section>
+<p>■出力文：&lt;?php echo ○○?&gt;</p>
+<br>
+<p>ex.)</p>
+<div class="box" id="ph_1">
+<h3>&lt;!--変数--&gt;</h3>
+<p>&lt;?php<br>
+    $fruit="りんご";<br>
+    echo $fruit<br>
+?&gt;</p>
+⇒結果：りんご
+</div>
+	
+<div class="box" id="ph_2">
+<h3>&lt;!--変数を使った計算--&gt;</h3>
+<p>&lt;?php<br>
+  $sum=8+9;<br>
+  echo $sum<br>
+?&gt;</p>
+⇒結果：17
+</div>
+
+<div class="box" id="ph_3">
+<h3>&lt;!--else if文--&gt;</h3>
+<p>&lt;?php<br>
+$x = 1071;<br>
+if($x % 3 == 0 &amp;&amp; $x % 7==0){<br>
+echo "xは3の倍数かつ7の倍数です。";<br>
+}<br>
+elseif($x % 3 == 0){<br>
+echo "xは3の倍数ですが7の倍数ではありません。";<br>
+}<br>
+elseif($x % 7 == 0){<br>
+echo "xは7の倍数ですが3の倍数ではありません。";<br>
+} <br>
+else{<br>
+echo "xは7の倍数でも3の倍数でもありません。";<br>
+}<br>
+?&gt;</p>
+⇒結果：xは3の倍数かつ7の倍数です。
+</div>
+
+<div class="box" id="ph_4">
+<h3>&lt;!--switch文--&gt;</h3>
+<p>&lt;?php<br>
+$num = 6; <br>
+$remainder = 6%3;<br>
+switch($reminder){<br> 
+case 0:<br>  
+echo "大吉です。";<br>
+break;<br>
+case 1:<br>
+echo "中吉です。";<br>  
+break;<br> 
+case 2:<br> 
+echo "小吉です。";<br>
+break;<br>
+default:<br>
+echo "凶です。";<br>
+break;<br>
+}<br>
+?&gt;</p>
+⇒結果：大吉です。
+</div>
+
+<div class="box" id="ph_5">
+<h3>&lt;!--インデックス値--&gt;</h3>
+<p>&lt;?php<br>
+$colors = array("赤","青","黄");<br>
+echo $colors[0];<br>
+$colors[]="白";<br>
+echo $colors[3];<br>
+?&gt;</p>
+⇒結果：赤白
+</div>
+
+<div class="box" id="ph_6">
+<h3>&lt;!--インデックス値の応用--&gt;</h3>
+<p>&lt;?php<br>
+$scores=array("数学" => 70,"英語" => 90,"国語" =>80);<br>
+$scores["国語"] += 5;<br>
+echo $scores["国語"];<br>
+?&gt;</p>
+⇒結果：85点
+</div>
+
+<div class="box" id="ph_7">
+<h3>&lt;!--for文--&gt;</h3>
+<p>&lt;?php<br>
+for($i = 51 ; $i &lt;= 100 ; $i++){<br>
+echo $i;<br>
+echo '&lt;br&gt;';<br>
+}<br>
+?&gt;</p>
+⇒結果：51<br>
+　　　　52<br>
+　　　　53<br>
+　　　　...<br>
+　　　　100
+</div>
+
+<div class="box" id="ph_8">
+<h3>&lt;!--while文--&gt;</h3>
+<p>&lt;?php<br>
+$i=2;<br>
+while($i &lt;=100){ <br>
+echo $i;<br>
+$i+=2;<br>
+echo '&lt;br&gt;'<br>
+}<br>
+?&gt;</p>
+⇒結果：2<br>
+　　　　4<br>
+　　　　6<br>
+　　　　...<br>
+　　　　100
+</div>
+
+<div class="box" id="ph_9">
+<h3>&lt;!--for文とbreak--&gt;</h3>
+<p>&lt;?php<br>
+for($i=1 ; $i &lt;= 1000 ; $i++){<br>
+if($i &gt;=501){<br>
+break;<br>
+}<br>
+echo $i;<br>
+echo '&lt;br&gt;';<br>
+}
+?&gt;</p>
+⇒結果：1<br>
+　　　　2<br>
+　　　　3<br>
+　　　　...<br>
+　　　　501
+</div>
+
+<div class="box" id="ph_10">
+<h3>&lt;!--for文とcontinue--&gt;</h3>
+<p>&lt;?php
+for($i = 1 ; $i &lt;= 1000 ; $i++){<br>
+if($i % 3==0){<br>
+continue;<br>
+}<br>
+echo $i;<br>
+echo '&lt;br&gt;';<br>
+}<br>
+?&gt;</p>
+⇒結果：1<br>
+　　　　2<br>
+　　　　4<br>
+　　　　5<br>
+　　　　7<br>
+　　　　8<br>
+　　　　10<br>
+　　　　･･･<br>
+　　　　998<br>
+　　　　1000
+</div>
+
+<div class="box" id="ph_11">
+<h3>&lt;!--foreach文--&gt;</h3>
+<p>&lt;?php<br>
+$scores = array('数学' => 70, '英語' => 90, '国語' => 80);<br>
+foreach($scores as $key => $value){<br>
+echo $key."は".$value."点です。";<br>
+}<br>
+?&gt;</p>
+⇒結果：数学は70点です。英語は90点です。国語は80点です。
+</div>
+
+<div class="box" id="ph_12">
+<h3>&lt;!--関数（strlen、count、rand）--&gt;</h3>
+<p>&lt;?php<br>
+$str = 'progate';<br>
+echo strlen($str);<br>
+echo '&lt;br&gt;';<br><br>
+$array = array('HTML', 'CSS', 'PHP');<br>
+echo count($array);<br>
+echo '&lt;br&gt;';<br><br>
+echo rand(10,15);<br>
+?&gt;</p>
+⇒結果：7<br>
+　　　　3<br>
+　　　　13
+</div>
+
+<div class="box" id="ph_13">
+<h3>&lt;!--関数の定義--&gt;</h3>
+<p>&lt;?php<br>
+function hello(){<br>
+echo "Hello, world!";<br>
+}<br>
+hello();<br>
+echo '&lt;br&gt;';<br><br>
+function printRectangleArea($height,$width){<br>
+echo $height * $width;<br>
+}<br>
+printRectangleArea(5,10);<br>
+?&gt;</p>
+⇒結果：Hello, world!<br>
+　　　　50
+</div>
+
+<div class="box" id="ph_14">
+<h3>&lt;!--戻り値--&gt;</h3>
+<p>&lt;?php<br>
+function getCircleArea($radius){<br>
+return $radius * $radius * 3;<br>
+}<br>
+$circleArea=getCircleArea(5);<br>
+echo $circleArea;<br>
+?&gt;</p>
+⇒結果：75
+	</section>
+	
+
+<h2 id="rb">Ruby</h2>
+<section>
+<p>■出力文：puts ○○</p>
+<br>
+<p>ex.)</p>
+<div class="box">
+<h3>#文字列に変数を挿入</h3>
+<p>length = 9<br>
+width = 8<br>
+area = length * width<br>
+puts "面積は#{area}です"</p>
+⇒結果：面積は72です
+</div>
+	
+<div class="box">
+<h3>#文字列にインデックス付きの変数を挿入</h3>
+<p>languages = ["日本語", "英語", "スペイン語"]<br>
+puts "#{languages[1]}を話せます"</p>
+⇒結果：英語を話せます
+</div>
+	
+<div class="box">
+<h3>#if文</h3>
+<p>score = 100<br>
+if score == 100<br>
+puts "満点です"<br>
+end<br>
+if score != 100<br>
+puts "満点ではありません"<br>
+end</p>
+⇒結果：満点です
+</div>
+	
+<div class="box">
+<h3>#else if文</h3>
+<p>score = 73<br>
+if score &gt; 80<br>
+puts "よくできました"<br>
+elsif score &gt; 60 <br>
+puts"まずまずです"<br>
+else<br>
+puts "がんばりましょう"<br>
+end</p>
+⇒結果：まずまずです
+</div>
+	
+<div class="box">
+<h3>#変数とelse if文</h3>
+<p>year = 1994<br>
+if year &lt; 1896<br>
+puts "#{year}年にオリンピックはまだありません"<br>
+elsif year == 1916 || year == 1940 || year == 1944<br>
+puts "#{year}年にオリンピックは開催されませんでした"<br>
+elsif year % 4 == 0<br>
+puts "#{year}年は夏季オリンピックが開催されました"<br>
+else <br>
+puts "#{year}年は夏季オリンピックイヤーではありません"<br>
+end</p>
+⇒結果：1994年は夏季オリンピックイヤーではありません
+</div>
+</section>
+	
+			
+<h2 id="sq">SQL</h2>
+	<section>
+<p>■出力文：WHERE ○○</p>
+<br>
+ex.)<br>
+<figure><img src="images/SQL.png"></figure>	
+
+<div class="box" id="sq_1">
+<h3>--「2017-08-01以前」のデータを取得</h3>
+<p>SELECT *<br>
+FROM purchases<br>
+WHERE purchased_at&lt;="2017-08-01";</p>
+</div>
+		
+<div class="box" id="sq_2">
+<h3>--「プリン」を含むデータを取得</h3>
+<p>SELECT *<br>
+FROM purchases<br>
+WHERE name LIKE"%プリン%";</p>
+</div>
+		
+<div class="box" id="sq_3">
+<h3>--「にんじゃわんこ」でないデータを取得</h3>
+<p>SELECT *<br>
+FROM purchases<br>
+WHERE NOT character_name="にんじゃわんこ";</p>
+</div>
+		
+<div class="box" id="sq_4">
+<h3>--NULLであるデータを取得</h3>
+<p>SELECT *<br>
+FROM purchases<br>
+WHERE price IS NULL;</p>
+</div>
+		
+<div class="box" id="sq_5">
+<h3>--「食費」かつ「ひつじ仙人」のデータを取得</h3>
+<p>SELECT *<br>
+FROM purchases<br>
+WHERE category="食費" AND character_name="ひつじ仙人";</p>
+</div>
+		
+<div class="box" id="sq_6">
+<h3>--priceカラムを基準に「降順に並び替えた」データを、最大で「5件」取得</h3>
+<p>SELECT *<br>
+FROM purchases<br>
+ORDER BY price DESC<br>
+LIMIT 5;</p>
+</div>
+	</section>
+	
+<h2 id="py"><span>Python <small>-Not ready-</small></span></h2>
+	
+<!--<h2><span>Ruby on Rails5 <small>-Not ready-</small></span></h2>-->
+	
+</main>
+	
+	
+<p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
+
+<footer>参考：<a href="http://prog-8.com/languages" target="_blank">プログラミング学習サービス「Progate」</a></footer>
+	
+</div>	
+	
+
+<script>
+//アコーディオン
+$(function() {
+$('section:gt(0)').hide();
+$('h2').click(function(){
+	$('+section', this).slideToggle();
+})
+});
+	
+//ページトップ
+$(function(){
+var topBtn=$('#pageTop');
+topBtn.hide();
+
+$(window).scroll(function(){
+  if($(this).scrollTop()>80){
+    topBtn.fadeIn();
+  }else{
+    topBtn.fadeOut();
+  } 
+});
+
+topBtn.click(function(){
+  $('body,html').animate({
+  scrollTop: 0},500);
+  return false;
+});
+});
+	
+//ハンバーガー
+$(function() {
+    $('.navToggle').click(function() {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});
+
+$(function() {
+$('.navToggle').click(function() {
+$('body').append('<div id="overlay"></div>');
+	});
+});
+	
+//メガメニュー
+$('.globalMenuPc > ul > li').hover(function(){
+	childpanel = $(this).children('.mddwrap');
+	$(this).each(function(){
+		childpanel.css({height:'0',display:'block',opacity:'0'}).
+		stop().animate({height:'150px',opacity:'1'},0,'swing');
+	});
+	},function(){
+	childpanel.css({display:'none'});
+});
+	   
+//モーダルウィンドウ
+$(function() {
+  $('.click').click(function(){
+    $('#modal').fadeIn();
+  });
+});
+$(function() {
+  $('.close').click(function(){
+    $('#modal').fadeOut();
+  });
+});
+
+$(function() {
+  $('.click').click(function(){
+    $('body').css({overflow:'hidden'});
+  });
+});
+$(function() {
+  $('.close').click(function(){
+    $('body').css({overflow:'auto'});
+  });
+});
+	
+</script>
+</body>
+</html>
